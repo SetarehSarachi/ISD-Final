@@ -14,12 +14,14 @@
 
     <title>Edit Video</title>
 
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-
+<!--     <link href="style_description.css" rel="stylesheet">
+ -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,11 +32,35 @@
 </head>
 
 <body>
-
-    <div id="header">
+ <div id="header">
         <div id="login"><p>Hello, [Username]</p><p>Logout | Help</p></div>
         <h1><img src="pitt.png" alt="Pitt Logo" />OpenMedSim</h1>
     </div>
+
+ 
+ 
+    
+
+<!--  <div id="header">
+        <div id="login"><p>Hello, [Username]</p></div>
+<div id="headtitle" style ="margin-left:500px">
+  <h1><img class="displayed" src="images/pitt.png" alt="Pitt Logo"/>ScopingSim</h1>
+  </div>
+</div>
+
+  <div id="content">
+        <div id="nav">
+
+  <ul>
+  <li><a class="active" href="#createnewproject">Create New Project</a></li>
+  <li><a href="#openexistingproject">Open Existing Project</a></li>
+
+  <li style="float:right"><a href="#logout">Logout</a></li>
+</ul>
+
+</div>
+</div> -->
+
 
     <div id="wrapper">
 
@@ -56,43 +82,33 @@
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-
         <!-- Page Content -->
         <div id="page-content-wrapper">
+             <!-- <h1 style="margin-top: -10px">Edit Video</h1> -->
+
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <!-- <h1>Edit Video</h1> -->
-<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Show Questions</a>
+                    <div class="col-lg-6">
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper </code></p>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Show Questions </a>    
                     </div>
-                </div>
-            </div>
-                         <div id="mainContainer" style ="float:right; padding-right: initial; margin-right: -10px; margin-top:-50px">
-                            <div style="border-left:1px #000000 solid; margin-left=50%; height:400px;"/> 
+                    <div class="col-lg-6">
+                     <div id="mainContainer" style ="float:right; padding-right: initial; margin-right: -10px; margin-top:0px">
+                        <div style="border-left:1px #000000 solid; margin-left:5; margin-top:-10px; height:400px;"/> 
                              <div id="videoMain">
                                 <video id="videoPreview" width = "470" height = "300"   style="margin-left=10px">
-                                <source src="/Users/setaresarachi/Downloads/ISDFinal/boots/stock.mp4" type="video/mp4">
+                                <source src="/Users/setaresarachi/Desktop/ISD-Final/stock.mp4" type="video/mp4">
                                  Your browser does not support HTML5 video.
                                 </video>
                             </div>
-            <div id="debugInfo" style="display: none" ></div>
-    </div>
-                        
-        
-        <!-- /#page-content-wrapper -->
+            <div id="debugInfo" style="display: none" ></div> 
+                </div>
+            </div>
+            </div>
 
-<!--    <div id="mainContainer" style ="float:right">
-            <div id="videoMain">
-                <video id="videoPreview" width = "800" height = "420">
-                    <source src="/Users/setaresarachi/Downloads/ISDFinal/boots/stock.mp4" type="video/mp4">
-                    Your browser does not support HTML5 video.
-                </video>
-            </div>
-            <div id="debugInfo">
-            </div>
-    </div> -->
         </div>
+    </div>
+   </div>    
     <!-- /#wrapper -->
 
     <!-- jQuery -->

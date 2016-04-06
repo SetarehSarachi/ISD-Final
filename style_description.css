@@ -11,14 +11,16 @@
 }
 
 h1{
-	font-size: 3em;
-	font-family: 'Arimo';
+	float: center;
+	font-size: em;
+	font-family: 'times';
 	background: #006;
 }
 
+
 #descform{
 	width: 65%;
-	margin: 0 auto;
+	margin-left: 20px;
 	margin-bottom: 45px;
 }
 #descform input[type=text]{
@@ -29,6 +31,19 @@ h1{
   height: 50px;
  }
 
+ #dropper{
+ 	margin: 30px auto;
+ 	text-align: center;
+  position: relative;;
+ }
+ #dropper img{
+ 	/*width: 70%;*/
+ 	border: solid #559 1px;
+ 	border-radius: 15px;
+ 	padding: 5%;
+ 	box-shadow:7px 7px 15px #AAA inset;
+ }
+ 
 
 
 
