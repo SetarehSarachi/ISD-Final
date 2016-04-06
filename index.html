@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="openmedsim.css">
+    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Edit Video</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="header">
+        <div id="login"><p>Hello, [Username]</p><p>Logout | Help</p></div>
+        <h1><img src="pitt.png" alt="Pitt Logo" />OpenMedSim</h1>
+    </div>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    Q1 - Why color is changed ? 
+                </li>
+                <li>
+                    Q2 - What does the color show ?
+                </li>
+                <li>
+                    Q3 - Some other question ?
+                </li>
+                <li>
+                    Q4 - Another question ?
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- <h1>Edit Video</h1> -->
+<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Show Questions</a>
+                    </div>
+                </div>
+            </div>
+                         <div id="mainContainer" style ="float:right; padding-right: initial; margin-right: -10px; margin-top:-50px">
+                            <div style="border-left:1px #000000 solid; margin-left=50%; height:400px;"/> 
+                             <div id="videoMain">
+                                <video id="videoPreview" width = "470" height = "300"   style="margin-left=10px">
+                                <source src="/Users/setaresarachi/Downloads/ISDFinal/boots/stock.mp4" type="video/mp4">
+                                 Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+            <div id="debugInfo" style="display: none" ></div>
+    </div>
+                        
+        
+        <!-- /#page-content-wrapper -->
+
+<!--    <div id="mainContainer" style ="float:right">
+            <div id="videoMain">
+                <video id="videoPreview" width = "800" height = "420">
+                    <source src="/Users/setaresarachi/Downloads/ISDFinal/boots/stock.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <div id="debugInfo">
+            </div>
+    </div> -->
+        </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+    <script>
+            $( document ).ready(function(){
+                var prevX = 0;
+                var prevY = 0;
+                var $videoPreview = $("#videoPreview");
+                var video = $videoPreview.get(0);
+                var h = $( document ).height();
+                var w = $( document ).width();
+                
+                $('body').mousemove(function( event ) {
+                    var coordX = event.pageX;
+                    var coordY = event.pageY;
+
+                    if(prevY < coordY)
+                        video.currentTime = video.currentTime + 0.05; // percent * video.duration;
+                    else
+                        video.currentTime = video.currentTime - 0.05; // percent * video.duration;
+                        
+                    prevY = coordY;
+                    prevX = coordX;
+                    $('#debugInfo').text("movement: " + coordY + "; rotation: " + coordX);
+                });
+            });
+        </script>
+
+</body>
+
+</html>
