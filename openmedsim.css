@@ -1,18 +1,18 @@
-*{
+/**{
 	margin: 0;
 	Padding: 0;
 }
 body{
 	font-family: 'Merriweather', serif;
 	min-width: 650px;
-}
-#header{
+}*/
+/*#header{
 	background: #006;
 	color: #FFA;
 	width: 100%;
 	overflow: hidden;
-}
-#subheader{
+}*/
+/*#subheader{
 	background: -webkit-linear-gradient(#FFF, #BBF); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(#FFF, #BBF); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(#FFF, #BBF); /* For Firefox 3.6 to 15 */
@@ -21,11 +21,13 @@ body{
 	border-top: #55F solid 2px;
 	padding: 15px 25px;
 }
-h1{
+*/
+
+/*h1{
 	font-size: 3em;
 	font-family: 'Arimo';
 	padding: 25px;
-}
+}*/
 h2{
 	padding: .5em 0;
 	font-family: 'Arimo';
@@ -46,10 +48,10 @@ h3{
 	margin: 0 auto;
 	margin-bottom: 25px;
 }
-#login{
+/*#login{
 	float: right;
 	padding: 15px;
-}
+}*/
 #descform{
 	width: 65%;
 	margin: 0 auto;
