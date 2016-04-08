@@ -69,24 +69,34 @@
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
-             <!-- <h1 style="margin-top: -10px">Edit Video</h1> -->
 
+            <!-- <div class="container-fluid"> -->
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6">
                         <p>Make sure to keep all page content within the <code>#page-content-wrapper </code></p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Show Questions </a>    
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" onclick="showHide(this)">
+                        Show Questions </a> 
+                        <p>use pointer to move through the video</p>
+                        <p>Click on the desired point to add event</p> 
+                        <input type="text" placeholder="Name of the event" ></input><br><br>
+                        <textarea id="tex1" rows="4" cols="70" name="Comment" placeholder="Comment" style="width:100%; height:100px; box-sizing:border-box;"></textarea><br>
+                        
+                        <textarea id="tex2" rows="7" cols="70" placeholder="Type the question" style="width:100%; height:100px; box-sizing:border-box;"></textarea>
+                        <button type="button" style="float:right" onclick="next()">Next Question</button>   
                     </div>
 
                     <div class="col-lg-6"> 
                      <div id="mainContainer" style ="float:right; padding-right: initial; margin-right: -10px; margin-top:0px">
                         <div id ="vLine" style="border-left:1px #000000 solid;">
                         <div id="videoMain">
-                                <video id="videoPreview" width = "470" height = "300">
+                                <video id="videoPreview" width = "470" height = "300" onmousemove="funcMoveOnVideo(event)" onclick="OnClickEv(event)">
                                 <source src="/Users/setaresarachi/Desktop/ISD-Final/stock.mp4" type="video/mp4">
                                  Your browser does not support HTML5 video.
                                 </video>
-                            </div> </div>  
+                                <p id="event"></p>
+                            </div> 
+                        </div>  
                              
             <div id="debugInfo" style="display: none" ></div> 
                 </div>
@@ -113,7 +123,16 @@
     </script>
 
     <script>
-            $( document ).ready(function(){
+
+            function showHide(event){
+                if(event.innerHTML=="hide"){
+                    event.innerHTML="Show Questions";
+                }
+                else event.innerHTML="hide";
+                    
+
+            }
+           function funcMoveOnVideo(event){
                 var prevX = 0;
                 var prevY = 0;
                 var $videoPreview = $("#videoPreview");
@@ -121,7 +140,7 @@
                 var h = $( document ).height();
                 var w = $( document ).width();
                 
-                $('body').mousemove(function( event ) {
+                
                     var coordX = event.pageX;
                     var coordY = event.pageY;
 
@@ -133,8 +152,31 @@
                     prevY = coordY;
                     prevX = coordX;
                     $('#debugInfo').text("movement: " + coordY + "; rotation: " + coordX);
-                });
-            });
+                
+                
+            }
+            
+            function OnClickEv(event){
+                var coordX = event.pageX;
+                var coordY = event.pageY;
+                // var content="<p>Create new Event</p><br><input type='text'></input><br>";
+                // document.getElementById("event").innerHTML=content+"X Cord"+coordX+"Y Cord"+coordY;
+            }
+            function next()
+            {
+                var xhttp = new XMLHttpRequest();
+                   xhttp.onreadystatechange = function() {
+                       if (xhttp.readyState == 4 && xhttp.status == 200) {
+                       
+                       document.getElementById("foodLogList").innerHTML = xhttp.responseText;
+                       }
+                   };
+                   xhttp.open("GET", "loggedFoods", true);
+                   xhttp.send();
+                   }
+                
+            
+            
         </script>
 
 </body>
