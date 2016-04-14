@@ -173,6 +173,9 @@ li:last-child {
 	width:10px;
 
 }
+.col-lg-6:last-child {
+    border-left: 1px solid;
+}
 
 #videoPreview {
 	  margin-left:12px;

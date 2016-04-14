@@ -88,7 +88,7 @@
 
                     <div class="col-lg-6"> 
                      <div id="mainContainer" style ="float:right; padding-right: initial; margin-right: -10px; margin-top:0px">
-                        <div id ="vLine" style="border-left:1px #000000 solid;">
+                        <div id ="vLine">
                         <div id="videoMain">
                                 <video id="videoPreview" width = "470" height = "300" onmousemove="funcMoveOnVideo(event)" onclick="OnClickEv(event)">
                                 <source src="/Users/setaresarachi/Desktop/ISD-Final/stock.mp4" type="video/mp4">
@@ -125,10 +125,10 @@
     <script>
 
             function showHide(event){
-                if(event.innerHTML=="hide"){
-                    event.innerHTML="Show Questions";
+                if(event.innerHTML=="Show Questions"){
+                    event.innerHTML="Hide";
                 }
-                else event.innerHTML="hide";
+                else event.innerHTML="Show Questions";
                     
 
             }
