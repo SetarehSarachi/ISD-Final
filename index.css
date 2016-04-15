@@ -68,13 +68,15 @@ li:last-child {
     text-decoration: none;
 }
 
+
 .li a:hover:not(.active) {
     background-color: #111;
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: #999067;
 }
+
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -173,12 +175,23 @@ li:last-child {
 	width:10px;
 
 }
+
+#instructionLine{
+    display: block;
+    height: 1px;
+    border: 0;
+  
+    border-top: 1px solid #000000;
+    margin: 1em 0;
+    padding: 0;
+}
 .col-lg-6:last-child {
     border-left: 1px solid;
 }
 
 #videoPreview {
 	  margin-left:12px;
+      margin-top: 20px;
 }
 
 @media(min-width:768px) {

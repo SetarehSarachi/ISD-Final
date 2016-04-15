@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="jquery.big-slide.js"></script>
 
     <link rel="stylesheet" href="index.css">
     <!-- <link rel="stylesheet" href="openmedsim.css"> -->
@@ -39,7 +42,7 @@
     <div id="nav">
 
   <ul id="mainmenu">
-  <li class="li"><a class="active" href="#createnewproject">Create New Project</a></li>
+  <li class="li" ><a class="active" href="#createnewproject">Create New Project</a></li>
   <li class="li"><a href="#openexistingproject">Open Existing Project</a></li>
 
   <li class="li" id="logout" style="float:right"><a href="#logout">Logout</a></li>
@@ -74,15 +77,52 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6">
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper </code></p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" onclick="showHide(this)">
-                        Show Questions </a> 
-                        <p>use pointer to move through the video</p>
-                        <p>Click on the desired point to add event</p> 
-                        <input type="text" placeholder="Name of the event" ></input><br><br>
-                        <textarea id="tex1" rows="4" cols="70" name="Comment" placeholder="Comment" style="width:100%; height:100px; box-sizing:border-box;"></textarea><br>
-                        
-                        <textarea id="tex2" rows="7" cols="70" placeholder="Type the question" style="width:100%; height:100px; box-sizing:border-box;"></textarea>
+                        <ul id="mainmenu" style="height:52px; margin-top:-10px; margin-left:-20px; margin-bottom:15px;">
+                            <li class="li"> <a href="#menu" class="menu-link" id="menu-toggle" onclick="showHide(this)">Hide Question</a>
+
+<!--<a href="#menu-toggle" class="btn btn-default" id="menu-toggle" onclick="showHide(this)">
+                        Show Questions </a> --> </li>
+
+                      <li class="li" style="padding-left:100px;"> <h2 style="color:#ffffff; text-align:center;position:relative; top:-8px;"> Video Title </h2> </li>
+                       </ul>
+
+                        <ul><li><p>Use pointer to move through the video</p></li>
+                        <li><p>Click on the desired point to add event</p></li> </ul>
+                        <hr id="instructionLine">
+                        <input type="text" placeholder=" Name of the event" ></input><br><br>
+                        <textarea id="tex1" rows="4" cols="70" name="Comment" placeholder=" Comment" style="width:100%; height:70px; box-sizing:border-box;"></textarea><br>
+                        <hr id="instructionLine">
+                        <div>
+                        Choose question mode. &nbsp;
+                        </div><br>
+                       <div class="input-data">
+                         <ul class="nav nav-tabs" style="margin-top:-10px;">
+                        <li class="active"><a data-toggle="tab" href="#home">Open Ended</a></li>
+                        <li><a data-toggle="tab" href="#menu1">MCQ Single-answer</a></li>
+                        <li><a data-toggle="tab" href="#menu2">MCQ Multiple-answer</a></li>
+                      </ul>
+                      <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active"><br>
+                        <textarea id="tex2" rows="7" cols="70" placeholder="Type the question" style="width:100%; height:50px; box-sizing:border-box;"></textarea></div>
+                        <div id="menu1" class="tab-pane fade"><br> 
+                            <textarea id="tex2" rows="7" cols="70" placeholder="Type the question" style="width:100%; height:50px; box-sizing:border-box;"></textarea>
+                            
+                                <ul class="answers">
+                                <input type="radio" name="q1" value="a" id="q1a"><input></input><br/><br>
+                                <input type="radio" name="q1" value="b" id="q1b"><input></input><br/><br>
+                                <input type="radio" name="q1" value="c" id="q1c"><input></input><br/><br>
+                                <input type="radio" name="q1" value="d" id="q1d"><input></input><br/><br>
+                                </ul>
+                        </div>
+                        <div id="menu2" class="tab-pane fade"><br>
+                            <textarea id="tex2" rows="7" cols="70" placeholder="Type the question" style="width:100%; height:50px; box-sizing:border-box;"></textarea>
+
+                         </div>
+                  </div>
+
+              </div>
+                  <br>
+      
                         <button type="button" style="float:right" onclick="next()">Next Question</button>   
                     </div>
 
@@ -90,10 +130,12 @@
                      <div id="mainContainer" style ="float:right; padding-right: initial; margin-right: -10px; margin-top:0px">
                         <div id ="vLine">
                         <div id="videoMain">
-                                <video id="videoPreview" width = "470" height = "300" onmousemove="funcMoveOnVideo(event)" onclick="OnClickEv(event)">
+                            
+                                <video id="videoPreview" width = "450" height = "258" onmousemove="funcMoveOnVideo(event)" onclick="OnClickEv(event)" style="border-width:5px; border-style:solid; border-color:#800000;">
                                 <source src="/Users/setaresarachi/Desktop/ISD-Final/stock.mp4" type="video/mp4">
                                  Your browser does not support HTML5 video.
                                 </video>
+                              
                                 <p id="event"></p>
                             </div> 
                         </div>  
@@ -122,16 +164,17 @@
     });
     </script>
 
+
     <script>
 
             function showHide(event){
                 if(event.innerHTML=="Show Questions"){
-                    event.innerHTML="Hide";
+                    event.innerHTML="Hide Questions";
                 }
-                else event.innerHTML="Show Questions";
-                    
+                else event.innerHTML="Show Questions";                    
 
             }
+              
            function funcMoveOnVideo(event){
                 var prevX = 0;
                 var prevY = 0;
