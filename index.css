@@ -3,15 +3,39 @@
 	Padding: 0;
 }
 body{
-	font-family: 'Merriweather', serif;
+	font-family: 'Verdana', serif !important;
 	min-width: 650px;
+}
+
+.h2, h2 {
+    font-size: 30px;
+    line-height: 10px!important;
+
+}
+.question {
+    font-weight: bold;
+}
+.nav > li > a {
+    font-size: 11px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    border-bottom: 2px solid #999067 !important;
+    border-image: none !important;
+    border-left: 2px solid #999067 !important;
+    border-right: 0 none;
+    border-top: 2px solid #999067 !important;
 }
 
 #header{
 	background: #006;
-	color: #FFA;
+	color: #CDB77C;
 	width: 100%;
 	overflow: hidden;
+
 }
 #subheader{
 	background: -webkit-linear-gradient(#FFF, #BBF); /* For Safari 5.1 to 6.0 */
@@ -40,13 +64,15 @@ body{
 	float: center;
 	font-family: 'times';
 	background: #006;
+    margin-top: 10px;
+
 }
 #mainmenu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #173BB3;
 }
 
 .li{
@@ -70,7 +96,7 @@ li:last-child {
 
 
 .li a:hover:not(.active) {
-    background-color: #111;
+    background-color: #CCCC99;
 }
 
 .active {
@@ -91,13 +117,13 @@ li:last-child {
 
 #sidebar-wrapper {
     z-index: 1000;
-    position: fixed;
+    position: absolute;
     left: 250px;
     width: 0;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #333;
+    background: #0048DB;
     color: #ffffff;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -134,6 +160,8 @@ li:last-child {
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
+
+    font-size: 12px;
 }
 
 .sidebar-nav li a {
@@ -181,7 +209,7 @@ li:last-child {
     height: 1px;
     border: 0;
   
-    border-top: 1px solid #000000;
+    border-top: 1px dashed #000000;
     margin: 1em 0;
     padding: 0;
 }
