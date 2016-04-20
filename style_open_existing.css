@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    Padding: 0;
+}
+body{
+    font-family: 'Verdana', serif !important;
+    min-width: 650px;
+}
+#header{
+    background: #006;
+    color: #CDB77C;
+    width: 100%;
+    overflow: hidden;
+
+}
+#subheader{
+    background: -webkit-linear-gradient(#FFF, #BBF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFF, #BBF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFF, #BBF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFF, #BBF); /* Standard syntax */
+    color: #555;
+    border-top: #55F solid 2px;
+    padding: 15px 25px;
+}
+
+#login{
+	float: right;
+	padding: 15px;
+}
+
+#headtitle{
+    margin-left: 500px;
+}
+#logo{
+    float: center;
+    font-family: 'times';
+    background: #006;
+    margin-top: 10px;
+
+}
+#mainmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #173BB3;
+}
+
+/*h1{
+	float: center;
+	font-size: em;
+	font-family: 'times';
+	background: #006;
+}*/
+.li{
+    float: left;
+    border-right:1px solid #bbb;
+}
+.li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+.add {
+    display: block;
+    background-color: #000;
+    border: solid 9px #000;
+    border-radius: 50%
+}
+.button {
+	background: transparent;
+    border: none;
+    color: white;
+    padding: 0.1px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0.5px 2px;
+    cursor: pointer;
+}
+
+li a:hover:not(.active) {
+    background-color: #CCCC99;
+}
+
+.active {
+    background-color: #F1F1E1;
+}

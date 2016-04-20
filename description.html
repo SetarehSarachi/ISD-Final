@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
      <title>Scoping Sim</title>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
      <!-- Latest compiled and minified CSS -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -14,58 +14,59 @@
 
      <!-- Latest compiled and minified JavaScript -->
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-      <link  property="stylesheet" href="style_description.css" type="text/css" rel="stylesheet">
+      <link  property="stylesheet" href="css/style_description.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
   <div id="header">
-		<div id="login"><p>Hello, [Username]</p></div>
-<div id=headtitle style ="margin-left: 500px">
-  <h1><img class="displayed" src="pitt.png" alt="Pitt Logo"/>ScopingSim</h1>
-  </div>
+		      <div id="login"><p>Hello, [Username]</p></div>
+          <div id="headtitle">
+          <h1 id="logo">
+          <img class="displayed" src="pitt.png" alt="Pitt Logo"/> ScopingSim</h1>
+      </div>
 </div>
 
   <div id="content">
 		<div id="nav">
 
-  <ul>
-  <li><a class="active" href="#createnewproject">Create New Project</a></li>
-  <li><a href="#openexistingproject">Open Existing Project</a></li>
+  <ul id="mainmenu">
+  <li class="li"><a href="#createnewproject" style="background-color:#CCCC99">Create New Project</a></li>
+  <li class="li"><a href="#openexistingproject">Open Existing Project</a></li>
 
-  <li style="float:right"><a href="#logout">Logout</a></li>
+  <li class="li" id="logout" style="float:right"><a href="#logout">Logout</a></li>
 </ul>
 
 </div>
+</div>
 
-<div id="column">
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-lg-6">
+        <div id="column">
 
 			<div id="descform" style="float: left; margin-top: 20px">
 
-
 			<form action="" method="post">
-				<p>Title: <br>
-				<input type="text"></p>
-				<p>Description: <br>
-				<textarea></textarea></p>
+				<p style="margin-top:4%">Enter name of the project : <br>
+				<input type="text" placeholder=" Project Name"style="margin-top:2%" ></p>
+				<p style="margin-top:4%">Enter description of the project : <br>
+				<textarea id="tex1" rows="4" cols="70" name="Comment" placeholder=" Project Description" style="width:120%; height:70px; box-sizing:border-box; margin-top:2%"></textarea><br>
 
-        <p class="align"><p>Upload Video</p><input type="file"></p>
-
+        <p class="align"><p>Upload the video : </p><input type="file"></p>
 
 			</form>
-
 			</div>
 		</div>
-
+  </div>
+ <div class="col-lg-6"> 
     <div id="dropper" style ="margin-right: 20px; float: right; margin-top: -235px">
       <img src="images/white.jpg" class="img-rounded" alt="Drop Video Here"  width="470" height="300"/>
-      <p class="droptext">Video Preview</p>
+      <p class="droptext" style="margin-top:2%">Video Preview</p>
     </div>
-
-	</div>
-
-
-
-
+  </div>
+</div>
+</div>
 
 </body>
 
