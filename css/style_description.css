@@ -74,14 +74,6 @@ body{
 }
 
 
-/*h1{
-	float: center;
-	font-size: em;
-	font-family: 'times';
-	background: #006;
-}*/
-
-
 #descform{
 	width: 65%;
 	margin-left: 20px;
@@ -111,8 +103,6 @@ body{
  }
  
 
-
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -120,6 +110,9 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
+
+
+
 
 li {
     float: left;
