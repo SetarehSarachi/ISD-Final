@@ -1,24 +1,27 @@
-*{
-	margin: 0;
-	Padding: 0;
-}
-body{
-	font-family: 'Verdana', serif !important;
-	min-width: 650px;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.h2, h2 {
+body {
+    font-family: 'Verdana',serif !important;
+    min-width: 650px;
+}
+
+.h2,h2 {
     font-size: 30px;
-    line-height: 10px!important;
+    line-height: 10px !important;
+}
 
-}
 .question {
-    font-weight: bold;
+    font-weight: 700;
 }
+
 .nav > li > a {
     font-size: 11px;
 }
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+
+.nav-tabs > li.active > a,.nav-tabs > li.active > a:focus,.nav-tabs > li.active > a:hover {
     -moz-border-bottom-colors: none !important;
     -moz-border-left-colors: none !important;
     -moz-border-right-colors: none !important;
@@ -27,46 +30,52 @@ body{
     border-image: none !important;
     border-left: 2px solid #F1F1E1 !important;
     border-right: 2px solid #F1F1E1 !important;
-    border-top: 2px solid #F1F1E1!important;
+    border-top: 2px solid #F1F1E1 !important;
 }
 
-#header{
-	background: #006;
-	color: #CDB77C;
-	width: 100%;
-	overflow: hidden;
-
-}
-#subheader{
-	background: -webkit-linear-gradient(#FFF, #BBF); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#FFF, #BBF); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#FFF, #BBF); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#FFF, #BBF); /* Standard syntax */
-	color: #555;
-	border-top: #55F solid 2px;
-	padding: 15px 25px;
+#header {
+    background: #006;
+    color: #CDB77C;
+    width: 100%;
+    overflow: hidden;
 }
 
-#ScopingSim{
-	
-	font-size: 36px;
-	font-family: 'times';
-	background: #006;
+#subheader {
+    background: -webkit-linear-gradient(#FFF,#BBF);
+/* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFF,#BBF);
+/* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFF,#BBF);
+/* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFF,#BBF);
+/* Standard syntax */
+    color: #555;
+    border-top: #55F solid 2px;
+    padding: 15px 25px;
 }
-#login{
-	float: right;
-	padding: 15px;
+
+#ScopingSim {
+    font-size: 36px;
+    font-family: 'times';
+    background: #006;
 }
-#headtitle{
-	margin-left: 500px;
+
+#login {
+    float: right;
+    padding: 15px;
 }
-#logo{
-	float: center;
-	font-family: 'times';
-	background: #006;
+
+#headtitle {
+    margin-left: 500px;
+}
+
+#logo {
+    float: center;
+    font-family: 'times';
+    background: #006;
     margin-top: 10px;
-
 }
+
 #mainmenu {
     list-style-type: none;
     margin: 0;
@@ -75,12 +84,10 @@ body{
     background-color: #173BB3;
 }
 
-.li{
+.li {
     float: left;
-    border-right:1px solid #bbb;
+    border-right: 1px solid #bbb;
 }
-
-
 
 li:last-child {
     border-right: none;
@@ -88,15 +95,14 @@ li:last-child {
 
 .li a {
     display: block;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-
 .li a:hover:not(.active) {
-    background-color: #CCCC99;
+    background-color: #CC9;
 }
 
 .active {
@@ -105,10 +111,10 @@ li:last-child {
 
 #wrapper {
     padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
 }
 
 #wrapper.toggled {
@@ -124,11 +130,11 @@ li:last-child {
     margin-left: -250px;
     overflow-y: auto;
     background: #0048DB;
-    color: #ffffff;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    color: #fff;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -147,7 +153,6 @@ li:last-child {
 }
 
 /* Sidebar Styles */
-
 .sidebar-nav {
     position: absolute;
     top: 0;
@@ -160,14 +165,13 @@ li:last-child {
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
-
     font-size: 12px;
 }
 
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
 }
 
 .sidebar-nav li a:hover {
@@ -176,8 +180,7 @@ li:last-child {
     background: rgba(255,255,255,0.2);
 }
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
+.sidebar-nav li a:active,.sidebar-nav li a:focus {
     text-decoration: none;
 }
 
@@ -188,7 +191,7 @@ li:last-child {
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #ffffff;
+    color: #fff;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -197,46 +200,45 @@ li:last-child {
 }
 
 #vLine {
-	margin-right: 460px;
-	margin-top:-20px;
-	height:480px;
-	width:10px;
-
+    margin-right: 460px;
+    margin-top: -20px;
+    height: 480px;
+    width: 10px;
 }
 
-#instructionLine{
+#instructionLine {
     display: block;
     height: 1px;
     border: 0;
-  
-    border-top: 1px dashed #000000;
+    border-top: 1px dashed #000;
     margin: 1em 0;
     padding: 0;
 }
+
 .col-lg-6:last-child {
     border-left: 1px solid;
 }
 
 #videoPreview {
-	  margin-left:12px;
-      margin-top: 20px;
+    margin-left: 12px;
+    margin-top: 20px;
 }
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
+        padding-left: 0px;
     }
 
     #wrapper.toggled {
-        padding-left: 0;
+        padding-left: 250px;
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 0px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
-        width: 0;
+        width: 250px;
     }
 
     #page-content-wrapper {
