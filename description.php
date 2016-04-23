@@ -109,26 +109,24 @@ ini_set('max_execution_time', 600);
         </div>
 
         <br>
-        <button class="btn btn-default" id="add" name="add" style=
+        <input class="btn btn-default" id="add" name="add" style=
         "background-color:#0066CB;color:#ffffff;width: 150px;margin-left: 35%;margin-top: -3%;" type=
-        "button">Preview</button>
-        <a href="index.html"><button class="btn btn-default" id="continue" onclick="next()" style=
+        "submit"value="Preview"/>
+        <a href="edit.html"><button class="btn btn-default" id="continue" onclick="next()" style=
         "background-color:#0066CB;color:#ffffff;width: 150px;margin-left: 63%;margin-top: -10%;" type=
         "button">Continue</button></a>
       </div>
 
 
       <div class="col-lg-6">
-        <div id="dropper" style="margin-right: 20px; float: left; margin-top: -235px">
+        <div class="col-lg-6">
+        <!-- <div id="dropper" style="margin-right: 123px; float: left; margin-top: -235px">
           <img alt="Drop Video Here" class="img-rounded" height="300" src="images/white.jpg" width=
-          "470">
-<video class ="droptext" width="300" height="200" controls>
+          "470"> -->
+<video class ="droptext" width="470" height="300" controls style="border-width:5px; border-style:solid; border-color:#CCCC9A;margin-right:0px; float:left; margin-bottom:123px;margin-top:49px;margin-left=21px;">
   <source src="upload/<?php echo $name ?>" type="video/mp4">
   </video>
-          <p class="droptext" style="margin-top:2%">Video Preview</p>
-        </div>
-      </div>
-       </form>
+    </form>
              <?php
          }
       ?>
