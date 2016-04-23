@@ -2,14 +2,31 @@
     margin: 0;
     padding: 0;
 }
-.imagefor{
-    position: absolute;
-    z-index: -1;
 
-}
+
+
 body {
     font-family: 'Verdana',serif !important;
     min-width: 650px;
+}
+#imagefor{
+    z-index: 1;
+  
+    position: absolute;
+    width: 560px;
+    opacity: 0.9;
+}
+#inputButton{
+    z-index: 1;
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 128px;
+    width: 350px;
+    height: 80px;
+    
+    color: #CDB77C;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .h2,h2 {
@@ -113,12 +130,15 @@ li:last-child {
     background-color: #F1F1E1;
 }
 
+
 #wrapper {
     padding-left: 0;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
+    z-index: -1;
+    position: absolute;
 }
 
 #wrapper.toggled {
@@ -226,6 +246,10 @@ li:last-child {
 #videoPreview {
     margin-left: 12px;
     margin-top: 20px;
+}
+
+.videodesc{
+    margin-left:20px;
 }
 
 @media(min-width:768px) {

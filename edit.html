@@ -35,6 +35,7 @@
   </div>
 
 
+
   <div id="content">
     <div id="nav">
       <ul id="mainmenu">
@@ -60,7 +61,9 @@
     </div>
   </div>
 
-<img src="http://previews.123rf.com/images/apostrophe/apostrophe1202/apostrophe120200036/12252791-formal-elegant-blue-background-with-soft-faded-vintage-grunge-texture-with-dark-black-vignette-frame-Stock-Photo.jpg" width="500" height="500" id="imagefor">
+
+<img src="http://www.clccministries.com/blue_box__god_loves_you_pg.jpg" width="480" height="600" id="imagefor">
+<h1 id="inputButton"> Click on the video to start editing</h1>
 
 
   <div id="wrapper">
@@ -160,7 +163,7 @@
                   <br>
 
                   <textarea cols="70" id="text1" placeholder=" Type the question" rows="7" style=
-                  "width:560px; height:50px; box-sizing:border-box; margin-left:10px; margin-bottom:10px;"></textarea>
+                  "width:500px; height:50px; box-sizing:border-box; margin-left:10px; margin-bottom:10px;"></textarea>
                 </div>
 
 
@@ -168,7 +171,7 @@
                   <br>
 
                   <textarea cols="70" id="text2" placeholder=" Type the question" rows="7" style=
-                  "width:560px; height:50px; box-sizing:border-box;margin-left:10px; margin-bottom:10px;"></textarea>
+                  "width:500px; height:50px; box-sizing:border-box;margin-left:10px; margin-bottom:10px;"></textarea>
 
                   <div class="answers" style="margin-left: 2em">
                     <input id="q1a" name="q1" style="margin-left:5px;" type="radio" value="a"><input style=
@@ -191,7 +194,7 @@
                   <br>
 
                   <textarea cols="70" id="text3" placeholder=" Type the question" rows="7" style=
-                  "width:560px; height:50px; box-sizing:border-box; margin-left:10px; margin-bottom:10px;"></textarea>
+                  "width:500px; height:50px; box-sizing:border-box; margin-left:10px; margin-bottom:10px;"></textarea>
                 
                   <div id="LANS.1.0">
                     <label><input name="ANS.1" style="margin-left:5px;" type="checkbox"><input style=
@@ -236,7 +239,7 @@
                 <div id="videoMain">
                   <video height="345" id="videoPreview" onclick="OnClickEv(event)" onmousemove=
                   "funcMoveOnVideo(event)" style=
-                  "border-width:5px; border-style:solid; border-color:#CCCC9A;" width="600px"><source src=
+                  "border-width:5px; border-style:solid; border-color:#CCCC9A; margin-left:0px" width="680px"><source src=
                   "stock.mp4" type="video/mp4"> Your browser does not
                   support HTML5 video.</video>
 
@@ -250,6 +253,7 @@
 
                   <div id="debugInfo" style="color:blue">
                   </div>
+                  
                   Rotation:
 
                   <div id="debugInfo1" style="color:blue">
@@ -260,7 +264,7 @@
                   </div>
                   <br>
                   <button class="btn btn-default" id="continue" onclick="showDialog()" style=
-                  "background-color:#2EAF5F;color:#ffffff;width: 160px; margin-left:448px;margin-top: -90px;"
+                  "background-color:#2EAF5F;color:#ffffff;width: 160px; margin-left:470px;margin-top: -90px;"
                   type="button">Save project & Exit</button>
                 </div>
               </div>
@@ -290,10 +294,10 @@
                     if(event.innerHTML=="Hide Questions"){
                         event.innerHTML="Show Questions";
                         document.getElementById("videoPreview").style.marginLeft="0px";
-                        document.getElementById("videoPreview").style.width="600px";
-                        document.getElementById("text1").style.width="560px";
-                        document.getElementById("text2").style.width="560px";
-                        document.getElementById("text3").style.width="560px";
+                        document.getElementById("videoPreview").style.width="680px";
+                        document.getElementById("text1").style.width="500px";
+                        document.getElementById("text2").style.width="500px";
+                        document.getElementById("text3").style.width="500px";
                         document.getElementById("continue").style.marginLeft="448px";
                         document.getElementById("nextQ").style.width="394px";
 
@@ -304,7 +308,7 @@
                          event.innerHTML="Hide Questions"; 
 
                     document.getElementById("videoPreview").style.marginLeft="0px";
-                    document.getElementById("videoPreview").style.width="490px"; 
+                    document.getElementById("videoPreview").style.width="470px"; 
                     document.getElementById("text1").style.width="440px";
                     document.getElementById("text2").style.width="440px";
                     document.getElementById("text3").style.width="440px";
@@ -350,6 +354,7 @@
                 }
                 
                 function OnClickEv(event){
+                  hideImage();
                     var coordX = event.pageX;
                     var coordY = event.pageY;
                     alert("The X stored is "+coordX+"The Y stored is"+coordY);
@@ -370,11 +375,16 @@
                        }
 
 
+                function hideImage(){
+                  document.getElementById("imagefor").style.visibility="hidden";
+                  document.getElementById("inputButton").style.visibility="hidden";
+                }
 
                   //Error Messages  
                var ALERT_TITLE = "Oops!";
                var ALERT_BUTTON_OK = "Ok";
                var ALERT_BUTTON_CANCEL="Cancel";
+
 
        function showDialog()
        {
