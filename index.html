@@ -32,7 +32,7 @@ Form.elements['file_src'].value = imgPath;
 <body>
   <div id="header">
     <div id="login">
-      <p>Hello, [Username]</p>
+      <p>Hello, Peter</p>
     </div>
 
 
