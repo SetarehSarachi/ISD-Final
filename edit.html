@@ -71,22 +71,8 @@
 
 
     <div id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <li style="list-style: none"><br>
-        </li>
-
-
-        <li>Q1 - Why color is changed ?</li>
-
-
-        <li>Q2 - What does the color show ?</li>
-
-
-        <li>Q3 - Some other question ?</li>
-
-
-        <li>Q4 - Another question ?</li>
-      </ul>
+      <ul class="sidebar-nav" id="questions"></ul> 
+      
     </div>
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
@@ -125,7 +111,10 @@
             </ul>
 
             <hr id="instructionLine">
-            <input placeholder=" Name of the event" type="text"><br>
+            <input id="nameofevent" placeholder=" Name of the event" type="text"> &nbsp &nbsp
+			Movement &nbsp<label for="X" id="X" style="font-weight:normal"></label> &nbsp &nbsp Rotation &nbsp<label id="Y" for="Y" style="font-weight:normal"></label>
+			<br>
+			
             <br>
 
             <textarea cols="70" id="tex1" name="Comment" placeholder=" Comment" rows="4" style=
@@ -174,16 +163,16 @@
                   "width:500px; height:50px; box-sizing:border-box;margin-left:10px; margin-bottom:10px;"></textarea>
 
                   <div class="answers" style="margin-left: 2em">
-                    <input id="q1a" name="q1" style="margin-left:5px;" type="radio" value="a"><input style=
+                    <input id="q1a" name="q1" style="margin-left:5px;" type="radio" value="a"><input id="a" style=
                     "margin-left:5px;"><br>
                     <br>
-                    <input id="q1b" name="q1" style="margin-left:5px;" type="radio" value="b"> <input style=
+                    <input id="q1b" name="q1" style="margin-left:5px;" type="radio" value="b"> <input id="b" style=
                     "margin-left:5px;"><br>
                     <br>
-                    <input id="q1c" name="q1" style="margin-left:5px;" type="radio" value="c"> <input style=
+                    <input id="q1c" name="q1" style="margin-left:5px;" type="radio" value="c"> <input id="c" style=
                     "margin-left:5px;"><br>
                     <br>
-                    <input id="q1d" name="q1" style="margin-left:5px;" type="radio" value="d"> <input style=
+                    <input id="q1d" name="q1" style="margin-left:5px;" type="radio" value="d"> <input id="d" style=
                     "margin-left:5px;"><br>
                     <br>
                   </div>
@@ -197,28 +186,28 @@
                   "width:500px; height:50px; box-sizing:border-box; margin-left:10px; margin-bottom:10px;"></textarea>
                 
                   <div id="LANS.1.0">
-                    <label><input name="ANS.1" style="margin-left:5px;" type="checkbox"><input style=
+                    <label><input name="ANS.1" style="margin-left:5px;" type="checkbox"><input id="a1" style=
                     "margin-left:5px;"></label><br>
                     <br>
                   </div>
 
 
                   <div id="LANS.1.1">
-                    <label><input name="ANS.1" style="margin-left:5px;" type="checkbox"><input style=
+                    <label><input name="ANS.1" style="margin-left:5px;" type="checkbox"><input id="a2" style=
                     "margin-left:5px;"></label><br>
                     <br>
                   </div>
 
 
                   <div id="LANS.1.2">
-                    <label><input name="ANS.1" style="margin-left:5px;" type="checkbox"><input style=
+                    <label><input name="ANS.1" style="margin-left:5px;" type="checkbox"><input id="a3" style=
                     "margin-left:5px;"></label><br>
                     <br>
                   </div>
 
 
                   <div id="LANS.1.3">
-                    <label><input name="ANS.1" style="margin-left:5px;" type="checkbox"><input style=
+                    <label><input name="ANS.1" style="margin-left:5px;" type="checkbox"><input id="a4" style=
                     "margin-left:5px;"></label><br>
                     <br>
                   </div>
@@ -355,24 +344,79 @@
                 
                 function OnClickEv(event){
                   hideImage();
+
+                  document.getElementById("nameofevent").value="";
+                  document.getElementById("tex1").value="";
+                  
                     var coordX = event.pageX;
                     var coordY = event.pageY;
-                    alert("The X stored is "+coordX+"The Y stored is"+coordY);
+                    
+					document.getElementById("X").innerHTML=coordX;
+					document.getElementById("Y").innerHTML=coordY;
+					document.getElementById("text1").value="";
+
+          document.getElementById("text2").value="";
+
+          document.getElementById("text3").value="";
+          document.getElementById("a").value="";
+          document.getElementById("b").value="";
+          document.getElementById("c").value="";
+          document.getElementById("d").value="";
+          document.getElementById("a1").value="";
+          document.getElementById("a2").value="";
+          document.getElementById("a3").value="";
+          document.getElementById("a4").value="";
+					
                     // var content="<p>Create new Event<\/p><br><input type='text'><\/input><br>";
                     // document.getElementById("event").innerHTML=content+"X Cord"+coordX+"Y Cord"+coordY;
                 }
                 function next()
                 {
-                    var xhttp = new XMLHttpRequest();
-                       xhttp.onreadystatechange = function() {
-                           if (xhttp.readyState == 4 && xhttp.status == 200) {
-                           
-                           document.getElementById("foodLogList").innerHTML = xhttp.responseText;
-                           }
-                       };
-                       xhttp.open("GET", "loggedFoods", true);
-                       xhttp.send();
-                       }
+
+					var question1=document.getElementById("text1").value;
+
+          var question2=document.getElementById("text2").value;
+
+          var question3=document.getElementById("text3").value;
+
+          
+					//alert(question);
+				//	document.getElementById("q1").innerHTML= question ;
+					var li=document.createElement("LI");
+					//alert("The "+li);
+					
+					var sub1=document.createTextNode(question1);
+          var sub2=document.createTextNode(question2);
+          var sub3=document.createTextNode(question3);
+					//alert(sub+"");
+          
+         
+         
+					li.appendChild(sub1);
+         
+          li.appendChild(sub2); 
+
+          li.appendChild(sub3);
+					
+					//alert(li);
+					
+					document.getElementById('questions').appendChild(li);
+					
+					document.getElementById("text1").value="";
+
+          document.getElementById("text2").value="";
+
+          document.getElementById("text3").value="";
+          document.getElementById("a").value="";
+          document.getElementById("b").value="";
+          document.getElementById("c").value="";
+          document.getElementById("d").value="";
+					document.getElementById("a1").value="";
+          document.getElementById("a2").value="";
+          document.getElementById("a3").value="";
+          document.getElementById("a4").value="";
+                   
+                }
 
 
                 function hideImage(){
