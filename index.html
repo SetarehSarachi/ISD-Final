@@ -58,7 +58,7 @@ Form.elements['file_src'].value = imgPath;
                     <a href="#logout">Logout</a>
                 </li>
                 <li class="li" id="help" style="float:right">
-                    <a href="#help">Help</a>
+                    <a href="https://www.youtube.com/watch?v=jHtp_vMXvww" target="_blank">Help</a>
                 </li>
                 
       </ul>
