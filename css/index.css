@@ -190,6 +190,7 @@ li:last-child {
     text-indent: 20px;
     line-height: 40px;
     font-size: 12px;
+    padding-left: 6px;
 }
 
 .sidebar-nav li a {
